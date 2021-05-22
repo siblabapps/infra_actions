@@ -57,7 +57,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull yudinapps/infra-app
+          sudo docker pull yudinapps/infra_app
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 yudinapps/infra-app
+          sudo docker run --rm -d -p 5000:5000 yudinapps/infra_app
